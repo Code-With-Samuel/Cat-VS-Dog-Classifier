@@ -17,12 +17,52 @@ This project is a simple yet powerful image classifier that distinguishes betwee
 ## 📁 Folder Structure
 
 cat_dog_classifier/
-├── data/ # Dataset folder
-├── model.py # Model definition (CNN using PyTorch Lightning)
-├── train.py # Training loop
-├── predict.py # Inference script
-├── requirements.txt # All dependencies
-└── README.md # You are here!
+├── data/ # Dataset folder (train/, val/, test/)
+
+│ ├── train/
+
+│ │ ├── cats/
+
+│ │ └── dogs/
+
+│ ├── val/
+
+│ │ ├── cats/
+
+│ │ └── dogs/
+
+│ └── test/
+
+│ ├── cats/
+
+│ └── dogs/
+
+│
+
+├── model.py # CNN model definition using PyTorch Lightning
+      
+├── train.py # Training script
+
+├── predict.py # Script for running inference
+
+├── requirements.txt # Python dependencies
+
+└── README.md # Project documentation
+
+Copy code
+This clearly outlines your project’s file organization and can be easily pasted into a README.md file. Let me know if you’d like me to add submodules for lightning_logs, checkpoints, or deployment tools like streamlit_app.py.
+
+
+
+
+
+
+
+
+Ask ChatGPT
+
+
+
 
 ---
 
