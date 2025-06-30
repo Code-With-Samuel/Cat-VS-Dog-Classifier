@@ -69,9 +69,12 @@ pip install -r requirements.txt
 
 ## Model Architecture:
 Input → Conv2D (3→16) → ReLU → MaxPool
-      → Conv2D (16→32) → ReLU → MaxPool
-      → Flatten → Linear(32*8*8 → 64) → ReLU
-      → Linear(64 → 2)
+
+→ Conv2D (16→32) → ReLU → MaxPool
+
+→ Flatten → Linear(32*8*8 → 64) → ReLU 
+
+→ Linear(64 → 2)
 
 
 
