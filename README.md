@@ -16,7 +16,7 @@ This project is a simple yet powerful image classifier that distinguishes betwee
 
 ## 📁 Folder Structure
 
-cat_dog_classifier/
+Cat-VS-Dog-Classifier/
 
 ├── data/ # Dataset folder (train/, val/, test/)
 
