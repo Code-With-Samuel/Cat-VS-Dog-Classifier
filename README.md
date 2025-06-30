@@ -17,21 +17,37 @@ This project is a simple yet powerful image classifier that distinguishes betwee
 ## 📁 Folder Structure
 
 cat_dog_classifier/
+
 ├── data/ # Dataset folder (train/, val/, test/)
+
 │ ├── train/
+
 │ │ ├── cats/
+
 │ │ └── dogs/
+
 │ ├── val/
+
 │ │ ├── cats/
+
 │ │ └── dogs/
+
 │ └── test/
+
 │ ├── cats/
+
 │ └── dogs/
+
 │
+
 ├── model.py # CNN model definition using PyTorch Lightning     
+
 ├── train.py # Training script
+
 ├── predict.py # Script for running inference
+
 ├── requirements.txt # Python dependencies
+
 └── README.md # Project documentation
 
 ---
