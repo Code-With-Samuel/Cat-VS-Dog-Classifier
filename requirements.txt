@@ -9,3 +9,4 @@ django
 djangorestframework
 pillow
 django-allauth
+jwt
