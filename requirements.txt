@@ -4,3 +4,8 @@ torchaudio
 lightning
 notebook
 kagglehub
+matplotlib
+django
+djangorestframework
+pillow
+django-allauth
