@@ -11,6 +11,16 @@ class_resources/*
 class_resources
 # Distribution / packaging
 .Python
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
 build/
 develop-eggs/
 dist/
@@ -26,6 +36,65 @@ wheels/
 share/python-wheels/
 *.egg-info/
 .installed.cfg
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+debug.log
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+.pytest_cache/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+
+# Environments
+.env
+.venv
+ENV/
+venv/
+
+# mypy
+.mypy_cache/
+.dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# Local settings
+local_settings.py
+
+# KaggleHub cache
+.cache/
+
+# Model files
+*.pth
 *.egg
 MANIFEST
 

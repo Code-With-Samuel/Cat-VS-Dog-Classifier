@@ -1,82 +1,51 @@
-# 🐱🐶 Cat vs Dog Image Classifier (PyTorch Lightning)
+# Cat vs Dog Classifier
 
-This project is a simple yet powerful image classifier that distinguishes between images of **cats** and **dogs** using a **Convolutional Neural Network (CNN)** built with **PyTorch Lightning**.
+A full-stack web application to classify images as cat or dog using a PyTorch model and Django backend.
 
----
+## Features
+- Image upload and prediction
+- User authentication (email & Google via django-allauth)
+- Token system (each prediction costs tokens)
+- Prediction history
+- Responsive UI
 
-## 🧠 Project Overview
+## Setup
 
-- **Framework:** PyTorch & PyTorch Lightning  
-- **Model:** Convolutional Neural Network (CNN)  
-- **Task:** Binary Classification (Cat or Dog)  
-- **Input:** Image (e.g., 32x32 RGB)  
-- **Output:** Class label (0 = Cat, 1 = Dog)
-
----
-
-## 📁 Folder Structure
-
-Cat-VS-Dog-Classifier/
-
-├── data/ # Dataset folder (train/, val/, test/)
-
-│ ├── train/
-
-│ │ ├── cats/
-
-│ │ └── dogs/
-
-│ ├── val/
-
-│ │ ├── cats/
-
-│ │ └── dogs/
-
-│ └── test/
-
-│ ├── cats/
-
-│ └── dogs/
-
-│
-
-├── model.py # CNN model definition using PyTorch Lightning     
-
-├── train.py # Training script
-
-├── predict.py # Script for running inference
-
-├── requirements.txt # Python dependencies
-
-└── README.md # Project documentation
-
----
-
-## 🔧 Setup Instructions
-
-### 1. 🐍 Create & Activate Virtual Environment *(optional but recommended)*
-```
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/Cat-VS-Dog-Classifier.git
+cd Cat-VS-Dog-Classifier
 ```
 
-### 2. Install Dependencies
-```
+### 2. Install dependencies
+```bash
 pip install -r requirements.txt
 ```
 
----
+### 3. Download the dataset
+Use the provided script or download from Kaggle. See EDA/perform_eda.ipynb for data exploration.
 
-## Model Architecture:
-Input → Conv2D (3→16) → ReLU → MaxPool
+### 4. Train the model
+Train your model in Google Colab or locally. Save the `.pth` file in the project root.
 
-→ Conv2D (16→32) → ReLU → MaxPool
+### 5. Django setup
+```bash
+cd backend
+python manage.py makemigrations
+python manage.py migrate
+python manage.py createsuperuser  # Optional, for admin access
+python manage.py runserver
+```
 
-→ Flatten → Linear(32*8*8 → 64) → ReLU 
+### 6. Access the app
+Go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your browser.
 
-→ Linear(64 → 2)
+## Development Notes
+- Media uploads are stored in the `media/` folder (excluded from git).
+- Model weights (`*.pth`) are excluded from git.
+- Emails are printed to the console for development.
+- For production, configure a real email backend and secure settings.
 
-
-
-
-
+## Credits
+- Dataset: [Kaggle - Dog and Cat Classification Dataset](https://www.kaggle.com/datasets/bhavikjikadara/dog-and-cat-classification-dataset)
+- PyTorch, Django, django-allauth.
