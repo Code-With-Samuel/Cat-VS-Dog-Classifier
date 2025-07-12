@@ -1,0 +1,6 @@
+torch
+torchvision
+torchaudio
+lightning
+notebook
+kagglehub
