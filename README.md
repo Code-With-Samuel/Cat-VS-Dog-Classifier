@@ -1,13 +1,12 @@
 
 # 🐾 Cat vs Dog Classifier
 
-An elegant, full-stack web app to predict if an image is a cat or a dog. Powered by Django, PyTorch, and Bootstrap.
+An elegant, full-stack web app to predict if an image is a cat or a dog. Powered by Django, PyTorch, and Bootstrap. No login required.
+
 
 ## 🚀 Features
 - 📷 Upload any image and get an instant prediction (Cat or Dog)
-- 🔒 User authentication (email & Google)
-- 💎 Token system for fair usage
-- 📊 User dashboard with prediction history and live AQI bar
+- 📊 Dashboard with prediction history
 - 🌐 Beautiful, responsive UI
 
 ## 🛠️ Quick Start
@@ -40,7 +39,7 @@ An elegant, full-stack web app to predict if an image is a cat or a dog. Powered
 
 ## 🙌 Credits
 - Dataset: [Kaggle - Dog and Cat Classification Dataset](https://www.kaggle.com/datasets/bhavikjikadara/dog-and-cat-classification-dataset)
-- Built with: Django, PyTorch, Bootstrap, django-allauth
+- Built with: Django, PyTorch, Bootstrap
 
 ---
 **Ready to classify? Upload your image and see the magic!**

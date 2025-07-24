@@ -1,3 +1,11 @@
+
+from .models import PredictionHistory
+
+def dashboard(request):
+    history = PredictionHistory.objects.all().order_by('-created_at')[:10]
+    return render(request, 'dashboard.html', {
+        'history': history,
+    })
 from django.shortcuts import render
 from django import forms
 from PIL import Image
@@ -10,6 +18,7 @@ class ImageUploadForm(forms.Form):
 def index(request):
     result = None
     confidence = None
+    image_url = None
     if request.method == 'POST':
         form = ImageUploadForm(request.POST, request.FILES)
         if form.is_valid():
@@ -29,6 +38,17 @@ def index(request):
             else:
                 result = 'Cat'
                 confidence = 75.0
+
+            # Save prediction history (no user association)
+            from django.core.files.base import ContentFile
+            from django.core.files.storage import default_storage
+            image.seek(0)
+            saved_path = default_storage.save(f"history_images/{image.name}", ContentFile(image.read()))
+            PredictionHistory.objects.create(
+                image=saved_path,
+                prediction=result
+            )
+            image_url = default_storage.url(saved_path)
     else:
         form = ImageUploadForm()
-    return render(request, 'upload.html', {'form': form, 'result': result, 'confidence': confidence})
+    return render(request, 'upload.html', {'form': form, 'result': result, 'confidence': confidence, 'image_url': image_url})

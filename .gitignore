@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+env.bak/
+db.sqlite3
+
 # Django and Python environment
 .env
 .venv
@@ -16,7 +19,7 @@ db.sqlite3
 
 # Media and static files
 media/
-backend/static/
+staticfiles/
 
 # Model weights and large files
 *.pth
