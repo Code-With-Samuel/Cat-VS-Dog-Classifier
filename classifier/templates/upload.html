@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container py-5 d-flex justify-content-center align-items-center min-vh-100">
+  <div class="card shadow-lg p-4" style="max-width: 420px; width: 100%;">
+    <div class="text-center mb-4">
+      <img src="https://img.icons8.com/fluency/96/cat-footprint.png" alt="Cat vs Dog" style="height: 64px;">
+      <h2 class="fw-bold mt-2">Cat vs Dog Classifier</h2>
+      <p class="text-muted mb-0">Upload an image to predict if it's a cat or a dog.</p>
+    </div>
+    <form method="post" enctype="multipart/form-data" class="mb-3">
+      {% csrf_token %}
+      <div class="mb-3">
+        <label for="id_image" class="form-label fw-semibold">Select Image</label>
+        <div class="input-group">
+          <input type="file" name="image" class="form-control" id="id_image" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-gradient w-100 fw-bold" style="background: linear-gradient(90deg, #4e54c8 0%, #8f94fb 100%); color: white;">Predict</button>
+    </form>
+    {% if result %}
+      <div class="alert alert-success text-center mt-3">
+        <h4 class="mb-1">Prediction: <span class="fw-bold">{{ result }}</span></h4>
+        <div class="mb-1">
+          <span class="badge bg-primary">Confidence: {{ confidence }}%</span>
+        </div>
+        {% if result == 'Dog' %}
+          <img src="https://img.icons8.com/fluency/48/dog.png" alt="Dog Icon">
+        {% elif result == 'Cat' %}
+          <img src="https://img.icons8.com/fluency/48/cat.png" alt="Cat Icon">
+        {% endif %}
+      </div>
+    {% endif %}
+    <div class="text-center mt-3">
+      <small class="text-muted">Powered by Django & PyTorch</small>
+    </div>
+  </div>
+</div>
+<style>
+  body {
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ff 100%);
+  }
+</style>
+{% endblock %}

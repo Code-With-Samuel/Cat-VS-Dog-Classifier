@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+  <h2>Features</h2>
+  <ul>
+    <li>Image upload and prediction</li>
+    <li>User authentication (email & Google via django-allauth)</li>
+    <li>Token system (each prediction costs tokens)</li>
+    <li>User dashboard with token usage and prediction history</li>
+    <li>Live AQI bar with real-time updates</li>
+    <li>Responsive UI</li>
+  </ul>
+  <a href="{% url 'showcase_home' %}" class="btn btn-secondary">Back to Home</a>
+</div>
+{% endblock %}

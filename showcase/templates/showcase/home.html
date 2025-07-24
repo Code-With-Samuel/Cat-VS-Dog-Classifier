@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+  <h1>Cat vs Dog Classifier</h1>
+  <p class="lead">A full-stack web application to classify images as cat or dog using a PyTorch model and Django backend.</p>
+  <a href="{% url 'showcase_features' %}" class="btn btn-primary">See Features</a>
+  <a href="{% url 'showcase_demo' %}" class="btn btn-success">Live Demo</a>
+</div>
+{% endblock %}

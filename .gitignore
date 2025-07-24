@@ -3,6 +3,54 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Django and Python environment
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+db.sqlite3
+*.sqlite3
+
+# Media and static files
+media/
+backend/static/
+
+# Model weights and large files
+*.pth
+*.h5
+*.pt
+
+# Jupyter and notebook checkpoints
+.ipynb_checkpoints
+
+# VSCode and IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Compiled C extensions
+*.so
+
+# Catch-all for other unwanted files
+node_modules/
+dist/
+build/
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
 # C extensions
 *.so
 

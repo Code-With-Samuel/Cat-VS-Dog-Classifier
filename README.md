@@ -1,51 +1,46 @@
-# Cat vs Dog Classifier
 
-A full-stack web application to classify images as cat or dog using a PyTorch model and Django backend.
+# 🐾 Cat vs Dog Classifier
 
-## Features
-- Image upload and prediction
-- User authentication (email & Google via django-allauth)
-- Token system (each prediction costs tokens)
-- Prediction history
-- Responsive UI
+An elegant, full-stack web app to predict if an image is a cat or a dog. Powered by Django, PyTorch, and Bootstrap.
 
-## Setup
+## 🚀 Features
+- 📷 Upload any image and get an instant prediction (Cat or Dog)
+- 🔒 User authentication (email & Google)
+- 💎 Token system for fair usage
+- 📊 User dashboard with prediction history and live AQI bar
+- 🌐 Beautiful, responsive UI
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/yourusername/Cat-VS-Dog-Classifier.git
-cd Cat-VS-Dog-Classifier
-```
+## 🛠️ Quick Start
+1. **Clone the repo:**
+   ```bash
+   git clone https://github.com/yourusername/Cat-VS-Dog-Classifier.git
+   cd Cat-VS-Dog-Classifier
+   ```
+2. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. **Run migrations:**
+   ```bash
+   python manage.py makemigrations
+   python manage.py migrate
+   ```
+4. **Start the server:**
+   ```bash
+   python manage.py runserver
+   ```
+5. **Open your browser:**
+   - Go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) and try the Cat vs Dog Classifier!
 
-### 2. Install dependencies
-```bash
-pip install -r requirements.txt
-```
+## 📁 Project Structure
+- `backend/` — Django backend and settings
+- `classifier/` — Main app for prediction logic
+- `showcase/` — Project showcase pages
+- `media/` — Uploaded images (not tracked by git)
 
-### 3. Download the dataset
-Use the provided script or download from Kaggle. See EDA/perform_eda.ipynb for data exploration.
-
-### 4. Train the model
-Train your model in Google Colab or locally. Save the `.pth` file in the project root.
-
-### 5. Django setup
-```bash
-cd backend
-python manage.py makemigrations
-python manage.py migrate
-python manage.py createsuperuser  # Optional, for admin access
-python manage.py runserver
-```
-
-### 6. Access the app
-Go to [http://127.0.0.1:8000/](http://127.0.0.1:8000/) in your browser.
-
-## Development Notes
-- Media uploads are stored in the `media/` folder (excluded from git).
-- Model weights (`*.pth`) are excluded from git.
-- Emails are printed to the console for development.
-- For production, configure a real email backend and secure settings.
-
-## Credits
+## 🙌 Credits
 - Dataset: [Kaggle - Dog and Cat Classification Dataset](https://www.kaggle.com/datasets/bhavikjikadara/dog-and-cat-classification-dataset)
-- PyTorch, Django, django-allauth.
+- Built with: Django, PyTorch, Bootstrap, django-allauth
+
+---
+**Ready to classify? Upload your image and see the magic!**
